@@ -33,7 +33,9 @@ message sendMessageResponce {
 message getMessagesRequest {
     User user = 1;
 }
-message getMessagesResponce {}
+message getMessagesResponce {
+    Message message = 1;
+}
 
 
 message getUsersRequest {}
