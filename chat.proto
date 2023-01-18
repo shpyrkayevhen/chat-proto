@@ -1,7 +1,7 @@
 syntax = "proto3";
 package package.chat;
 
-
+// user schema
 message User {
     string login = 1; 
     string fullName = 2;
