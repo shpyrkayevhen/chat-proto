@@ -54,4 +54,3 @@ service ChatService {
     rpc getUsers (getUsersRequest) returns (getUsersResponce);
     rpc getMessages (getMessagesRequest) returns (stream getMessagesResponce);
 }
-
