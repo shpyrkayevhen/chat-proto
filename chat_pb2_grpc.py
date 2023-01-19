@@ -5,7 +5,6 @@ import grpc
 # Added path
 from . import chat_pb2 as chat__pb2
 
-
 class ChatServiceStub(object):
     """create services
     """
