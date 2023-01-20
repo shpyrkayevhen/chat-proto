@@ -7,11 +7,9 @@ message User {
     string fullName = 2;
 }
 
-
 message Users {
-    repeated User user = 1;    
+    repeated User user = 1; // list of users
 }
-
 
 message Message {
     uint32 id = 1;
@@ -21,36 +19,34 @@ message Message {
     string body = 5;
 }
 
-
 message sendMessageRequest {
     Message message = 1;
 }
-
 
 message sendMessageResponce {
     string response = 1;
 }
 
-
 message getMessagesRequest {
     User user = 1;
 }
-
 
 message getMessagesResponce {
     Message message = 1;
 }
 
+message getUsersRequest {} // empty
 
-message getUsersRequest {}
 message getUsersResponce {
     Users users = 1;
 }
 
-
+// Operate with users and user messages.
 service ChatService {
-    // create grpc method
+    // send message from client to server.
     rpc sendMessage (sendMessageRequest) returns (sendMessageResponce);
+    // send list of all users to client 
     rpc getUsers (getUsersRequest) returns (getUsersResponce);
+    // send all messages particular user to client 
     rpc getMessages (getMessagesRequest) returns (stream getMessagesResponce);
 }
