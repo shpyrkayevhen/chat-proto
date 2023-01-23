@@ -4,7 +4,7 @@ package package.chat;
 
 message User {
     string login = 1; 
-    string fullName = 2;
+    string full_name = 2;
 }
 
 message Users {
