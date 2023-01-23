@@ -12,7 +12,7 @@ message Users {
 }
 
 message Message {
-    reserved 1; // removed field
+    reserved 1; // removed id field
     User from_user = 2;
     User to_user = 3;
     float created_at = 4;
